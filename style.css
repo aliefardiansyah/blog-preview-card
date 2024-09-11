@@ -8,7 +8,13 @@
 { 
     color: hsl(228, 45%, 44%); 
 }
-
+:root {
+    /* custom properties */
+--Yellow: hsl(47, 88%, 63%);
+--White: hsl(0, 0%, 100%);
+--Gray-500 : hsl(0, 0%, 42%);
+--Gray-900 : hsl(0, 0%, 7%);
+}
 *{
     margin: 0;
     padding: 0;
@@ -20,24 +26,28 @@ body {
     display: grid;
     place-content: center;
     min-height: 100vh;
-    background-color: hsl(47, 88%, 63%);
+    background-color: var(--Yellow);
     padding: 1rem;
 }
 
 .card {
-    background-color: hsl(0, 0%, 100%);
-    max-width: 24rem;
+    background-color: var(--White);
+    max-width: 23rem;
     padding: 1.4rem;
     border-radius: 1.15rem;
-    border: 1px solid hsl(0, 0%, 7%);
-    box-shadow: 0.5rem 0.5rem hsl(0, 0%, 7%) ;
+    border: 1px solid var(--Gray-900);
+    box-shadow: 0.5rem 0.5rem var(--Gray-900) ;
     transition: 0.3s;
 }
-
+.card-image img {
+    display: block;
+  max-width: 100%;
+  border-radius: 0.75rem;
+}
 .card-tag {
     display: inline-block;
     padding: 0.3rem 0.8rem;
-    background-color: hsl(47, 88%, 63%);
+    background-color: var(--Yellow);
     border-radius: 0.3rem;
     margin-top: 1.5rem;
     font-size: 0.9rem;
@@ -55,19 +65,22 @@ body {
 
 .card-title {
     margin-top: 1rem;
-    cursor: pointer;
-    transition: 0.2s;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0px;
   }
   
   .card-title:hover {
-    color: hsl(47, 88%, 63%);
+    color: var(--Yellow);
   }
 
   .card-content {
     margin-top: 1rem;
     font-weight: 300;
     line-height: 1.5;
-    color: var(--grey);
+    color: var(--Gray-500);
   }
   
   .card-avatar {
